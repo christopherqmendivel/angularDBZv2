@@ -1,0 +1,22 @@
+<div class="container">
+    <h1 class="text-center m-3"> {{ Title }}</h1>
+    <hr>
+    <div class="row">
+
+        <div class="col">
+            <!-- onDelete -->
+            <app-list-characters
+                [characterList]="Character"
+                (onDeleteID)="onDeleteCharacter($event)"
+                >
+                
+            </app-list-characters>
+        </div>
+
+        <div class="col">
+            <!-- add Character -->
+            <app-dbz-add-character (onNewCharacter)="onNewCharacter($event)"></app-dbz-add-character>
+        </div>
+
+    </div>
+</div>
